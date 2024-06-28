@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Blog for Everyone
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">
+    Welcome To Django Blog App
+</h1>
+<h2>
+    {% if form.instance.pk %}
+        Edit Blog
+    {% else %}
+        Create Blog
+    {% endif %}
+<form method="post" enctype="multipart/form-data" class="form-group">{% csrf_token %}  {{ form.as_p }} <input class="btn btn-warning" type="submit">Submit</form>
+<a href="{% url 'tweet_list' %}">Back to  Blog List</a>
+
+</h2>
+{% endblock %}
