@@ -58,6 +58,42 @@
             {% endif %}
           </div>
         </div>
+        <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+          }
+          .footer {
+              background-color: #333;
+              color: white;
+              text-align: center;
+              padding: 10px 0;
+              position: fixed;
+              width: 100%;
+              bottom: 0;
+          }
+          .footer a {
+              color: #f1f1f1;
+              text-decoration: none;
+              padding: 0 10px;
+          }
+          .footer a:hover {
+              text-decoration: underline;
+          }
+          .footer p {
+              font-size: 2rem;  /* Corrected property to increase text size */
+          }
+      </style>
+  </head>
+  <body>
+      <div class="content">
+          <!-- Your content goes here -->
+      </div>
+  
+      <div class="footer">
+          <p>Developed By Arham Fareed</p>
+      </div>
       </nav>
     <div class="container">
         {% block content %}
